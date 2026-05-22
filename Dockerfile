@@ -1,7 +1,10 @@
-FROM mlikiowa/napcat-docker:latest
-
-ENV ACCOUNT=2733972662
-ENV NAPCAT_GID=0
-ENV NAPCAT_UID=0
-
-EXPOSE 6099 3000
+version: '3'
+services:
+napcat:
+image: mlikiowa/napcat-docker:latest
+ports:
+- "6099:6099"
+environment:
+- ACCOUNT=2733972662
+- NAPCAT_GID=0
+- NAPCAT_UID=0
